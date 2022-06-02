@@ -57,17 +57,17 @@ const SidebarWrapper = styled.div`
 		visibility: hidden;
 		z-index: -1;
 		transition: var(--transition);
-		transform: scale(0);
+		transform: translate(-100%);
+
 		background: rgba(0, 0, 0, 0.5);
 	}
 	.sidebar-wrapper.show {
 		visibility: visible;
-		z-index: 2;
-		transform: scale(1);
+		z-index: 200;
 	}
 	.sidebar {
 		width: 90vw;
-		height: 95vh;
+		height: 80vh;
 		max-width: var(--fixed-width);
 		background: var(--clr-white);
 		border-radius: var(--radius);

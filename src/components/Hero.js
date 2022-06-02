@@ -2,119 +2,92 @@ import React from "react";
 import phoneImg from "../images/phone.svg";
 import { useGlobalContext } from "../context";
 import styled from "styled-components";
-
+import heroBcg from "../assets/hero-bcg.jpeg";
+import heroBcg2 from "../assets/hero-bcg-2.jpeg";
 const Hero = () => {
 	const { closeSubmenu } = useGlobalContext();
 	return (
-		<Wrapper>
-			<section className="hero" onMouseOver={closeSubmenu}>
-				<div className="hero-center">
-					<article className="hero-info">
-						<h1>
-							Payments infrastructure <br />
-							for the internet
-						</h1>
-						<p>
-							Millions of companies of all sizes—from startups to Fortune
-							500s—use Stripe’s software and APIs to accept payments, send
-							payouts, and manage their businesses online.
-						</p>
-						<button className="btn">Start now</button>
-					</article>
-					<article className="hero-images">
-						<img src={phoneImg} className="phone-img" alt="phone" />
-					</article>
-				</div>
-			</section>
+		<Wrapper className="section-center" onMouseOver={closeSubmenu}>
+			<article className="content">
+				<h1>
+					design your <br></br>
+					comfort zone
+				</h1>
+				<p>
+					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores,
+					unde quo repudiandae assumenda nisi incidunt nihil ratione autem
+					doloremque cupiditate eius sunt ut inventore perspiciatis provident
+					reiciendis necessitatibus laudantium totam!
+				</p>
+				<button to="/products" className="btn hero-btn">
+					shop now
+				</button>
+			</article>
+			<article className="img-container">
+				<img src={heroBcg} alt="table" className="main-img" />
+				<img src={heroBcg2} alt="perosn working" className="accent-img" />
+			</article>
 		</Wrapper>
 	);
 };
 const Wrapper = styled.section`
-	.hero::before {
-		content: "";
-		position: absolute;
-		width: 100%;
-		height: 65%;
-		top: 0;
-		left: 0;
-		background-size: cover;
-		background-repeat: no-repeat;
-		z-index: -1;
-	}
-	.hero {
-		position: relative;
-		min-height: 100vh;
-
-		display: grid;
-		grid-template-columns: 1fr;
-		justify-items: center;
-	}
-	.hero-center {
-		width: 90vw;
-		max-width: var(--max-width);
-		display: grid;
-		align-items: center;
-	}
-
-	.hero-info h1 {
-		text-transform: none;
-		max-width: 500px;
-		margin-bottom: 2rem;
-	}
-	.hero-info p {
-		max-width: 35em;
-		line-height: 1.8;
-	}
-	.hero-images {
+	min-height: 60vh;
+	display: grid;
+	place-items: center;
+	.img-container {
 		display: none;
 	}
-	@media screen and (min-width: 800px) {
-		.hero::before {
-			background-size: contain;
-			height: 100%;
-		}
-		.hero-center {
-			grid-template-columns: 2fr 1fr;
-		}
 
-		.hero-info h1 {
-			font-size: 3rem;
+	p {
+		line-height: 2;
+		max-width: 45em;
+		margin-bottom: 2rem;
+		color: var(--clr-grey-5);
+		font-size: 1rem;
+	}
+	@media (min-width: 992px) {
+		height: calc(100vh - 5rem);
+		grid-template-columns: 1fr 1fr;
+		gap: 8rem;
+		h1 {
+			margin-bottom: 2rem;
 		}
-		.hero-info p {
+		p {
 			font-size: 1.25rem;
 		}
-		.hero-images {
+		.hero-btn {
+			padding: 0.75rem 1.5rem;
+			font-size: 1rem;
+		}
+		.img-container {
 			display: block;
-			justify-self: center;
+			position: relative;
 		}
-		.phone-img {
-			width: 12rem;
+		.main-img {
+			width: 100%;
+			height: 550px;
+			position: relative;
+			border-radius: var(--radius);
+			display: block;
+			object-fit: cover;
 		}
-	}
-
-	@media screen and (min-width: 1200px) {
-		.hero-center {
-			grid-template-columns: 2fr 1fr;
-			align-items: end;
-			padding-bottom: 12vh;
+		.accent-img {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 250px;
+			transform: translateX(-50%);
+			border-radius: var(--radius);
 		}
-		.hero-info h1 {
-			max-width: 100%;
-			font-size: 5.5rem;
-		}
-		.hero-images {
-			align-self: end;
-		}
-		.phone-img {
-			width: 15rem;
-		}
-	}
-	@media screen and (min-width: 1400px) {
-		.hero-center {
-			padding-bottom: 20vh;
-		}
-		.phone-img {
-			width: 17rem;
+		.img-container::before {
+			content: "";
+			position: absolute;
+			width: 10%;
+			height: 80%;
+			background: var(--clr-primary-9);
+			bottom: 0%;
+			left: -8%;
+			border-radius: var(--radius);
 		}
 	}
 `;
