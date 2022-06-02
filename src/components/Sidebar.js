@@ -9,7 +9,7 @@ const Sidebar = () => {
 		<SidebarWrapper>
 			<div
 				className={`${
-					isSidebarOpen ? "sidebar-wrapper show" : "sidebar-wrapper"
+					isSidebarOpen ? "sidebar-wrapper show" : "sidebar-wrapper "
 				}`}
 			>
 				<aside className="sidebar">
@@ -63,7 +63,8 @@ const SidebarWrapper = styled.div`
 	}
 	.sidebar-wrapper.show {
 		visibility: visible;
-		z-index: 20000;
+		z-index: 200;
+		transform: translate(0);
 	}
 	.sidebar {
 		width: 90vw;
