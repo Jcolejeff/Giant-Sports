@@ -1,10 +1,17 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import Sidebar from "./components/Sidebar";
+import Submenu from "./components/Submenu";
 function App() {
-  return <h1>React Router 6 Tutorial</h1>;
+	return (
+		<>
+			<Navbar />
+			<Sidebar />
+			<Hero />
+			<Submenu />
+		</>
+	);
 }
 
 export default App;
-
-

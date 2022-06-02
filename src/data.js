@@ -1,37 +1,30 @@
-const products = [
+import { FaCreditCard, FaBook, FaBriefcase } from 'react-icons/fa';
+import React from 'react';
+const sublinks = [
   {
-    id: 'recZkNf2kwmdBcqd0',
-    name: 'accent chair',
-    image:
-      'https://dl.airtable.com/.attachmentThumbnails/e8bc3791196535af65f40e36993b9e1f/438bd160',
+    page: 'products',
+    links: [
+      { label: 'payment', icon: <FaCreditCard />, url: '/products' },
+      { label: 'terminal', icon: <FaCreditCard />, url: '/products' },
+      { label: 'connect', icon: <FaCreditCard />, url: '/products' },
+    ],
   },
   {
-    id: 'recEHmzvupvT8ZONH',
-    name: 'albany sectional',
-
-    image:
-      'https://dl.airtable.com/.attachmentThumbnails/0be1af59cf889899b5c9abb1e4db38a4/d631ac52',
+    page: 'developers',
+    links: [
+      { label: 'plugins', icon: <FaBook />, url: '/products' },
+      { label: 'libraries', icon: <FaBook />, url: '/products' },
+      { label: 'help', icon: <FaBook />, url: '/products' },
+      { label: 'billing', icon: <FaBook />, url: '/products' },
+    ],
   },
   {
-    id: 'rec5NBwZ5zCD9nfF0',
-    name: 'albany table',
-
-    image:
-      'https://dl.airtable.com/.attachmentThumbnails/7478483f40a2f56662a87b304bd4e104/707d397f',
-  },
-  {
-    id: 'recd1jIVIEChmiwhe',
-    name: 'armchair',
-
-    image:
-      'https://dl.airtable.com/.attachmentThumbnails/530c07c5ade5acd9934c8dd334458b86/cf91397f',
-  },
-  {
-    id: 'recoM2MyHJGHLVi5l',
-    name: 'bar stool',
-    image:
-      'https://dl.airtable.com/.attachmentThumbnails/a6119fabf7256049cc0e8dbcdf536c9c/b0153f66',
+    page: 'company',
+    links: [
+      { label: 'about', icon: <FaBriefcase />, url: '/products' },
+      { label: 'customers', icon: <FaBriefcase />, url: '/products' },
+    ],
   },
 ];
 
-export default products;
+export default sublinks;
