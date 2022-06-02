@@ -63,7 +63,7 @@ const SidebarWrapper = styled.div`
 	}
 	.sidebar-wrapper.show {
 		visibility: visible;
-		z-index: 200;
+		z-index: 20000;
 	}
 	.sidebar {
 		width: 90vw;
