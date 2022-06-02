@@ -3,6 +3,7 @@ import logo from "../images/logo.svg";
 import { FaBars } from "react-icons/fa";
 import { useGlobalContext } from "../context";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 const Navbar = () => {
 	const { openSidebar, openSubmenu, closeSubmenu } = useGlobalContext();
 	const displaySubmenu = (e) => {
@@ -22,7 +23,9 @@ const Navbar = () => {
 			<nav className="nav" onMouseOver={handleSubmenu}>
 				<div className="nav-center">
 					<div className="nav-header">
-						<img src={logo} className="nav-logo" alt="" />
+						<Link to="/">
+							<img src={logo} className="nav-logo" alt="" />
+						</Link>
 						<button className="btn toggle-btn" onClick={openSidebar}>
 							<FaBars />
 						</button>
@@ -30,21 +33,26 @@ const Navbar = () => {
 					<ul className="nav-links">
 						<li>
 							<button className="link-btn" onMouseOver={displaySubmenu}>
-								products
+								Affiliation
 							</button>
 						</li>
 						<li>
 							<button className="link-btn" onMouseOver={displaySubmenu}>
-								developers
+								Sports
 							</button>
 						</li>
 						<li>
 							<button className="link-btn" onMouseOver={displaySubmenu}>
-								company
+								Education
 							</button>
+						</li>
+						<li>
+							<button className="link-bt">Education</button>
+						</li>
+						<li>
+							<button className="link-bt">Education</button>
 						</li>
 					</ul>
-					<button className="btn signin-btn">Sign in</button>
 				</div>
 			</nav>
 		</Nav>
@@ -96,8 +104,8 @@ const Nav = styled.nav`
 	/* nav media query */
 	@media screen and (min-width: 800px) {
 		.nav-center {
-			display: grid;
-			grid-template-columns: auto 1fr auto;
+			display: flex;
+			justify-content: space-between;
 			align-items: center;
 		}
 		.toggle-btn {
@@ -110,7 +118,7 @@ const Nav = styled.nav`
 			display: block;
 			justify-self: center;
 			display: grid;
-			grid-template-columns: 1fr 1fr 1fr;
+			grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 			text-align: center;
 			height: 100%;
 			display: grid;
@@ -127,7 +135,17 @@ const Nav = styled.nav`
 			color: white;
 			text-transform: capitalize;
 			letter-spacing: 1px;
-			width: 10rem;
+			width: 7rem;
+		}
+		.link-bt {
+			height: 100%;
+			background: transparent;
+			border-color: transparent;
+			font-size: 1.1rem;
+			color: white;
+			text-transform: capitalize;
+			letter-spacing: 1px;
+			width: 7rem;
 		}
 	}
 `;

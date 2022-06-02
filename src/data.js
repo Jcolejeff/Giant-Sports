@@ -4,27 +4,27 @@ import { GiCompass, GiDiamondHard, GiStabbedNote } from "react-icons/gi";
 import React from "react";
 const sublinks = [
 	{
-		page: "products",
+		page: "Affiliation",
 		links: [
-			{ label: "payment", icon: <FaCreditCard />, url: "/products" },
-			{ label: "terminal", icon: <FaCreditCard />, url: "/products" },
-			{ label: "connect", icon: <FaCreditCard />, url: "/products" },
+			{ label: "payment", icon: <FaCreditCard />, url: "/comingSoon" },
+			{ label: "terminal", icon: <FaCreditCard />, url: "/comingSoon" },
+			{ label: "connect", icon: <FaCreditCard />, url: "/comingSoon" },
 		],
 	},
 	{
-		page: "developers",
+		page: "Sports",
 		links: [
-			{ label: "plugins", icon: <FaBook />, url: "/products" },
-			{ label: "libraries", icon: <FaBook />, url: "/products" },
-			{ label: "help", icon: <FaBook />, url: "/products" },
-			{ label: "billing", icon: <FaBook />, url: "/products" },
+			{ label: "plugins", icon: <FaBook />, url: "/comingSoon" },
+			{ label: "libraries", icon: <FaBook />, url: "/comingSoon" },
+			{ label: "help", icon: <FaBook />, url: "/comingSoon" },
+			{ label: "billing", icon: <FaBook />, url: "/comingSoon" },
 		],
 	},
 	{
-		page: "company",
+		page: "Education",
 		links: [
-			{ label: "about", icon: <FaBriefcase />, url: "/products" },
-			{ label: "customers", icon: <FaBriefcase />, url: "/products" },
+			{ label: "about", icon: <FaBriefcase />, url: "/comingSoon" },
+			{ label: "customers", icon: <FaBriefcase />, url: "/comingSoon" },
 		],
 	},
 ];

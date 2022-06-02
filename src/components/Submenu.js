@@ -1,12 +1,13 @@
 import React, { useState, useRef, useEffect } from "react";
 import { useGlobalContext } from "../context";
 import styled from "styled-components";
-
+import { Link } from "react-router-dom";
 const Submenu = () => {
 	const {
 		isSubmenuOpen,
 		page: { page, links },
 		location,
+		closeSubmenu,
 	} = useGlobalContext();
 	const container = useRef(null);
 	const [columns, setColumns] = useState("col-2");
@@ -36,10 +37,10 @@ const Submenu = () => {
 						{links.map((link, index) => {
 							const { url, icon, label } = link;
 							return (
-								<a key={index} href={url}>
+								<Link onClick={closeSubmenu} key={index} to={url}>
 									{icon}
 									{label}
-								</a>
+								</Link>
 							);
 						})}
 					</div>
