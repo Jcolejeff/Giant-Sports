@@ -79,7 +79,8 @@ function App() {
 	);
 }
 const StyledSlider = styled.section`
-	margin-block: 10rem;
+	margin-block-start: 10rem;
+	margin-block-end: 5rem;
 
 	.title {
 		text-align: center;

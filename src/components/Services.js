@@ -1,36 +1,38 @@
 import React from "react";
 import styled from "styled-components";
 import { services } from "../data";
-
+import { Zoom } from "react-awesome-reveal";
 const Services = () => {
 	return (
 		<Wrapper>
-			<div className="section-center">
-				<article className="header">
-					<h3>
-						Giant Sports
-						<br />
-						let's your build your future
-					</h3>
-					<p>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto
-						nihil explicabo repellat eos veritatis beatae quae quod. Expedita,
-						autem deleniti.
-					</p>
-				</article>
-				<div className="services-center">
-					{services.map((service) => {
-						const { id, icon, title, text } = service;
-						return (
-							<article key={id} className="service">
-								<span className="icon">{icon}</span>
-								<h4>{title}</h4>
-								<p>{text}</p>
-							</article>
-						);
-					})}
+			<Zoom>
+				<div className="section-center">
+					<article className="header">
+						<h3>
+							Giant Sports
+							<br />
+							let's your build your future
+						</h3>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit.
+							Architecto nihil explicabo repellat eos veritatis beatae quae
+							quod. Expedita, autem deleniti.
+						</p>
+					</article>
+					<div className="services-center">
+						{services.map((service) => {
+							const { id, icon, title, text } = service;
+							return (
+								<article key={id} className="service">
+									<span className="icon">{icon}</span>
+									<h4>{title}</h4>
+									<p>{text}</p>
+								</article>
+							);
+						})}
+					</div>
 				</div>
-			</div>
+			</Zoom>
 		</Wrapper>
 	);
 };
@@ -44,7 +46,6 @@ const Wrapper = styled.section`
 		color: var(--clr-primary-1);
 		font-weight: 300;
 	}
-	padding: 5rem 0;
 
 	background: var(--clr-primary-9);
 

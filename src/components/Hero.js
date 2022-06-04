@@ -35,6 +35,7 @@ const Wrapper = styled.section`
 	min-height: 60vh;
 	display: grid;
 	place-items: center;
+	margin-block-end: 3rem;
 	.img-container {
 		display: none;
 	}
