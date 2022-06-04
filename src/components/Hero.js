@@ -2,16 +2,17 @@ import React from "react";
 import phoneImg from "../images/phone.svg";
 import { useGlobalContext } from "../context";
 import styled from "styled-components";
-import heroBcg from "../assets/hero-bcg.jpeg";
-import heroBcg2 from "../assets/hero-bcg-2.jpeg";
+import heroBcg from "../images/imgg.jpg";
+import heroBcg2 from "../images/img2.jpg";
+import { Link } from "react-router-dom";
 const Hero = () => {
 	const { closeSubmenu } = useGlobalContext();
 	return (
 		<Wrapper className="section-center" onMouseOver={closeSubmenu}>
 			<article className="content">
 				<h1>
-					design your <br></br>
-					comfort zone
+					Giant Sports Plus<br></br>
+					<h6>Beyond Trophies </h6>
 				</h1>
 				<p>
 					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores,
@@ -19,9 +20,9 @@ const Hero = () => {
 					doloremque cupiditate eius sunt ut inventore perspiciatis provident
 					reiciendis necessitatibus laudantium totam!
 				</p>
-				<button to="/products" className="btn hero-btn">
-					shop now
-				</button>
+				<Link to="/form" className="btn hero-btn">
+					Start now
+				</Link>
 			</article>
 			<article className="img-container">
 				<img src={heroBcg} alt="table" className="main-img" />
@@ -51,6 +52,13 @@ const Wrapper = styled.section`
 		gap: 8rem;
 		h1 {
 			margin-bottom: 2rem;
+			font-size: 3rem;
+			h6 {
+				font-size: 1.4rem;
+				margin-block-start: 0.8rem;
+				font-style: italic;
+				font-weight: 200;
+			}
 		}
 		p {
 			font-size: 1.25rem;
@@ -58,6 +66,10 @@ const Wrapper = styled.section`
 		.hero-btn {
 			padding: 0.75rem 1.5rem;
 			font-size: 1rem;
+			background: var(--clr-primary-9);
+			color: black;
+			border-radius: var(--radius);
+			font-weight: 500;
 		}
 		.img-container {
 			display: block;

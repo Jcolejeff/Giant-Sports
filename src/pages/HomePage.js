@@ -4,7 +4,7 @@ import Sidebar from "../components/Sidebar";
 import Submenu from "../components/Submenu";
 import Slider from "../components/Slider";
 import Services from "../components/Services";
-import Footer from "../components/Footer";
+import About from "./About";
 
 const HomePage = () => {
 	return (
@@ -14,7 +14,7 @@ const HomePage = () => {
 			<Submenu />
 			<Services />
 			<Slider />
-			<Footer />
+			<About></About>
 		</>
 	);
 };

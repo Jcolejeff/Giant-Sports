@@ -1,30 +1,27 @@
 import { FaCreditCard, FaBook, FaBriefcase } from "react-icons/fa";
 import { GiCompass, GiDiamondHard, GiStabbedNote } from "react-icons/gi";
 
+import img1 from "./images/jannes-glas-0NaQQsLWLkA-unsplash.jpg";
+import img2 from "./images/jannik-skorna-mY2ZHBU6GRk-unsplash.jpg";
+import img3 from "./images/valentin-balan-k0aVMMZwqtU-unsplash.jpg";
 import React from "react";
 const sublinks = [
 	{
 		page: "Affiliation",
 		links: [
-			{ label: "payment", icon: <FaCreditCard />, url: "/comingSoon" },
-			{ label: "terminal", icon: <FaCreditCard />, url: "/comingSoon" },
-			{ label: "connect", icon: <FaCreditCard />, url: "/comingSoon" },
+			{ label: "Sports", icon: <FaBriefcase />, url: "/comingSoon" },
+			{ label: "Education", icon: <FaBriefcase />, url: "/comingSoon" },
+			{ label: "Agriculture", icon: <FaBriefcase />, url: "/comingSoon" },
+			{ label: "Tourism", icon: <FaBriefcase />, url: "/comingSoon" },
 		],
 	},
 	{
-		page: "Sports",
+		page: "Membership",
 		links: [
-			{ label: "plugins", icon: <FaBook />, url: "/comingSoon" },
-			{ label: "libraries", icon: <FaBook />, url: "/comingSoon" },
-			{ label: "help", icon: <FaBook />, url: "/comingSoon" },
-			{ label: "billing", icon: <FaBook />, url: "/comingSoon" },
-		],
-	},
-	{
-		page: "Education",
-		links: [
-			{ label: "about", icon: <FaBriefcase />, url: "/comingSoon" },
-			{ label: "customers", icon: <FaBriefcase />, url: "/comingSoon" },
+			{ label: "Participant", icon: <FaBook />, url: "/form" },
+			{ label: "Mentorship", icon: <FaBook />, url: "/comingSoon" },
+			{ label: "Partnership", icon: <FaBook />, url: "/comingSoon" },
+			{ label: "Endorsement", icon: <FaBook />, url: "/comingSoon" },
 		],
 	},
 ];
@@ -32,39 +29,25 @@ const sublinks = [
 export const data = [
 	{
 		id: 1,
-		image:
-			"https://res.cloudinary.com/diqqf3eq2/image/upload/v1595959131/person-2_ipcjws.jpg",
+		image: img1,
 		name: "maria ferguson",
-		title: "office manager",
-		quote:
-			"Fingerstache umami squid, kinfolk subway tile selvage tumblr man braid viral kombucha gentrify fanny pack raclette pok pok mustache.",
+		title: "Giant Sport Plus",
+		quote: " viral kombucha gentrify fanny pack raclette pok pok mustache.",
 	},
 	{
 		id: 2,
-		image:
-			"https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883417/person-3_ipa0mj.jpg",
-		name: "john doe",
-		title: "regular guy",
+		image: img2,
+		name: "Giant Sport Plus",
+		title: "Giant Sport Plus",
 		quote:
-			"Gastropub sustainable tousled prism occupy. Viral XOXO roof party brunch actually, chambray listicle microdosing put a bird on it paleo subway tile squid umami.",
+			", chambray listicle microdosing put a bird on it paleo subway tile squid umami.",
 	},
 	{
 		id: 3,
-		image:
-			"https://res.cloudinary.com/diqqf3eq2/image/upload/v1595959121/person-1_aufeoq.jpg",
-		name: "peter smith",
-		title: "product designer",
-		quote:
-			"Drinking vinegar polaroid street art echo park, actually semiotics next level butcher master cleanse hammock flexitarian ethical paleo.",
-	},
-	{
-		id: 4,
-		image:
-			"https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883334/person-1_rfzshl.jpg",
-		name: "susan andersen",
-		title: "the boss",
-		quote:
-			"Marfa af yr 3 wolf moon kogi, readymade distillery asymmetrical seitan kale chips fingerstache cloud bread mustache twee messenger bag. ",
+		image: img3,
+		name: "Giant Sport Plus",
+		title: "Giant Sport Plus",
+		quote: "clednal dkee cleanse hammock flexitarian ethical paleo.",
 	},
 ];
 

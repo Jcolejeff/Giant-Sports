@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../images/logo.svg";
+import logo from "../images/logo55.jpg";
 import { FaBars } from "react-icons/fa";
 import { useGlobalContext } from "../context";
 import styled from "styled-components";
@@ -32,25 +32,34 @@ const Navbar = () => {
 					</div>
 					<ul className="nav-links">
 						<li>
+							<Link to="/" className="link-btn-1">
+								Home
+							</Link>
+						</li>
+						<li>
+							<Link to="/comingSoon" className="link-btn-1">
+								Events
+							</Link>
+						</li>
+						<li>
+							<button className="link-btn" onMouseOver={displaySubmenu}>
+								Membership
+							</button>
+						</li>
+						<li>
 							<button className="link-btn" onMouseOver={displaySubmenu}>
 								Affiliation
 							</button>
 						</li>
 						<li>
-							<button className="link-btn" onMouseOver={displaySubmenu}>
-								Sports
-							</button>
+							<Link to="/comingSoon" className="link-btn-1">
+								Gallery
+							</Link>
 						</li>
 						<li>
-							<button className="link-btn" onMouseOver={displaySubmenu}>
-								Education
-							</button>
-						</li>
-						<li>
-							<button className="link-bt">Education</button>
-						</li>
-						<li>
-							<button className="link-bt">Education</button>
+							<Link to="/about" className="link-btn-1">
+								About Us
+							</Link>
 						</li>
 					</ul>
 				</div>
@@ -100,7 +109,9 @@ const Nav = styled.nav`
 	.signin-btn {
 		display: none;
 	}
-
+	.nav-logo {
+		width: 7.5rem;
+	}
 	/* nav media query */
 	@media screen and (min-width: 800px) {
 		.nav-center {
@@ -118,11 +129,12 @@ const Nav = styled.nav`
 			display: block;
 			justify-self: center;
 			display: grid;
-			grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+			grid-template-columns: repeat(6, 1fr);
 			text-align: center;
-			height: 100%;
+			height: 60%;
 			display: grid;
 			align-items: center;
+			justify-items: center;
 		}
 		.nav-links li {
 			height: 100%;
@@ -131,21 +143,23 @@ const Nav = styled.nav`
 			height: 100%;
 			background: transparent;
 			border-color: transparent;
-			font-size: 1.1rem;
+			font-size: 0.9rem;
 			color: white;
 			text-transform: capitalize;
 			letter-spacing: 1px;
 			width: 7rem;
+			justify-items: center;
 		}
-		.link-bt {
+		.link-btn-1 {
 			height: 100%;
 			background: transparent;
 			border-color: transparent;
-			font-size: 1.1rem;
+			font-size: 0.9rem;
 			color: white;
 			text-transform: capitalize;
 			letter-spacing: 1px;
-			width: 7rem;
+			width: 6rem;
+			justify-items: center;
 		}
 	}
 `;

@@ -8,6 +8,7 @@ import ComingSoon from "./pages/ComingSoon";
 import Form from "./pages/Form";
 import ErrorPage from "./pages/Error";
 import Sidebar from "./components/Sidebar";
+import Footer from "./components/Footer";
 function App() {
 	return (
 		<BrowserRouter>
@@ -21,6 +22,7 @@ function App() {
 				<Route path="form" element={<Form></Form>} />
 				<Route path="*" element={<ErrorPage></ErrorPage>} />
 			</Routes>
+			<Footer />
 		</BrowserRouter>
 	);
 }

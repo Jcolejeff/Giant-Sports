@@ -17,6 +17,36 @@ const Sidebar = () => {
 					<button className="close-btn" onClick={closeSidebar}>
 						<FaTimes />
 					</button>
+					<ul className="nav-links">
+						<li>
+							<Link onClick={closeSidebar} to="/" className="link-btn-1">
+								Home
+							</Link>
+						</li>
+						<li>
+							<Link
+								to="/comingSoon"
+								onClick={closeSidebar}
+								className="link-btn-1"
+							>
+								Events
+							</Link>
+						</li>
+						<li>
+							<Link
+								to="/comingSoon"
+								onClick={closeSidebar}
+								className="link-btn-1"
+							>
+								Gallery
+							</Link>
+						</li>
+						<li>
+							<Link to="/about" onClick={closeSidebar} className="link-btn-1">
+								About Us
+							</Link>
+						</li>
+					</ul>
 					<div className="sidebar-links">
 						{sublinks.map((item, index) => {
 							const { links, page } = item;
@@ -106,7 +136,15 @@ const SidebarWrapper = styled.div`
 		color: var(--clr-grey-5);
 		margin-right: 1rem;
 	}
-
+	.nav-links {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 1rem;
+		margin-bottom: 2rem;
+	}
+	.nav-links a {
+		color: var(--clr-grey-1);
+	}
 	@media screen and (min-width: 800px) {
 		.sidebar-wrapper {
 			display: none;

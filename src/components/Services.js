@@ -8,8 +8,9 @@ const Services = () => {
 			<div className="section-center">
 				<article className="header">
 					<h3>
-						custom furniture <br />
-						built only for you
+						Giant Sports
+						<br />
+						let's your build your future
 					</h3>
 					<p>
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto
@@ -41,13 +42,15 @@ const Wrapper = styled.section`
 	h3,
 	h4 {
 		color: var(--clr-primary-1);
+		font-weight: 300;
 	}
 	padding: 5rem 0;
 
-	background: var(--clr-primary-10);
+	background: var(--clr-primary-9);
 
 	.header h3 {
 		margin-bottom: 2rem;
+		line-height: 1.3;
 	}
 	p {
 		margin-bottom: 0;
@@ -96,7 +99,7 @@ const Wrapper = styled.section`
 	@media (min-width: 1280px) {
 		padding: 0;
 		.section-center {
-			transform: translateY(5rem);
+			transform: translateY(10rem);
 		}
 	}
 `;

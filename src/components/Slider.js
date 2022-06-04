@@ -26,16 +26,6 @@ function App() {
 		});
 	};
 
-	// useEffect(() => {
-	//   const lastIndex = people.length - 1
-	//   if (index < 0) {
-	//     setIndex(lastIndex)
-	//   }
-	//   if (index > lastIndex) {
-	//     setIndex(0)
-	//   }
-	// }, [index, people])
-
 	useEffect(() => {
 		let slider = setInterval(() => {
 			setIndex((oldIndex) => {
@@ -53,45 +43,44 @@ function App() {
 
 	return (
 		<StyledSlider>
-			<section className="section">
-				<div className="section">
-					{people.map((person, personIndex) => {
-						const { id, image, name, title, quote } = person;
+			<div className="section">
+				{people.map((person, personIndex) => {
+					const { id, image, name, title, quote } = person;
 
-						let position = "nextSlide";
-						if (personIndex === index) {
-							position = "activeSlide";
-						}
-						if (
-							personIndex === index - 1 ||
-							(index === 0 && personIndex === people.length - 1)
-						) {
-							position = "lastSlide";
-						}
+					let position = "nextSlide";
+					if (personIndex === index) {
+						position = "activeSlide";
+					}
+					if (
+						personIndex === index - 1 ||
+						(index === 0 && personIndex === people.length - 1)
+					) {
+						position = "lastSlide";
+					}
 
-						return (
-							<article className={position} key={id}>
-								<img src={image} alt={name} className="person-img" />
-								<h4>{name}</h4>
-								<p className="title">{title}</p>
-								<p className="text">{quote}</p>
-								<FaQuoteRight className="icon" />
-							</article>
-						);
-					})}
-					<button className="prev" onClick={prevSlide}>
-						<FiChevronLeft />
-					</button>
-					<button className="next" onClick={nextSlide}>
-						<FiChevronRight />
-					</button>
-				</div>
-			</section>
+					return (
+						<article className={position} key={id}>
+							<div></div>
+							<img src={image} alt={name} className="person-img" />
+
+							<h2 className="title">{title}</h2>
+							<p className="text">{quote}</p>
+						</article>
+					);
+				})}
+				<button className="prev" onClick={prevSlide}>
+					<FiChevronLeft />
+				</button>
+				<button className="next" onClick={nextSlide}>
+					<FiChevronRight />
+				</button>
+			</div>
 		</StyledSlider>
 	);
 }
 const StyledSlider = styled.section`
-	margin-block-start: 10rem;
+	margin-block: 10rem;
+
 	.title {
 		text-align: center;
 		margin-bottom: 2rem;
@@ -111,22 +100,25 @@ const StyledSlider = styled.section`
 	.section {
 		margin: 0 auto;
 		margin-top: 4rem;
-		width: 80vw;
-		height: 450px;
-		max-width: 800px;
+		width: 90vw;
+		height: 600px;
 		text-align: center;
 		position: relative;
 		display: flex;
 		overflow: hidden;
+		border-radius: 10px;
 	}
 	.person-img {
-		border-radius: 50%;
 		margin-bottom: 1rem;
-		width: 150px;
-		height: 150px;
+		width: 100%;
+
 		object-fit: cover;
 		border: 4px solid var(--clr-grey-8);
 		box-shadow: var(--dark-shadow);
+		border-radius: 10px;
+		position: absolute;
+		top: 0;
+		left: 0;
 	}
 	article h4 {
 		text-transform: uppercase;
@@ -136,7 +128,12 @@ const StyledSlider = styled.section`
 	.title {
 		text-transform: capitalize;
 		margin-bottom: 0.75rem;
-		color: var(--clr-grey-3);
+		color: white;
+		position: absolute;
+		z-index: 60;
+		top: 290px;
+		left: 50%;
+		transform: translateX(-50%);
 	}
 	.text {
 		max-width: 35em;
@@ -144,6 +141,12 @@ const StyledSlider = styled.section`
 		margin-top: 2rem;
 		line-height: 2;
 		color: var(--clr-grey-5);
+		color: white;
+		position: absolute;
+		z-index: 60;
+		top: 300px;
+		left: 50%;
+		transform: translateX(-50%);
 	}
 	.icon {
 		font-size: 3rem;
@@ -153,7 +156,7 @@ const StyledSlider = styled.section`
 	.prev,
 	.next {
 		position: absolute;
-		top: 200px;
+		top: 300px;
 		transform: translateY(-50%);
 		background: var(--clr-grey-5);
 		color: var(--clr-white);
@@ -187,6 +190,9 @@ const StyledSlider = styled.section`
 			height: 2rem;
 			font-size: 1.5rem;
 		}
+		.section {
+			width: 95vw;
+		}
 	}
 	article {
 		position: absolute;
@@ -196,16 +202,62 @@ const StyledSlider = styled.section`
 		height: 100%;
 		opacity: 0;
 		transition: var(--transition);
+
+		div {
+			position: absolute;
+			top: 0%;
+			left: 0%;
+			z-index: 44;
+			width: 100%;
+			height: 100%;
+			background-color: black;
+			opacity: 0.45;
+			color: white;
+		}
 	}
 	article.activeSlide {
 		opacity: 1;
 		transform: translateX(0);
+		.text {
+			animation: moveInRight 1s linear;
+		}
+		.title {
+			animation: moveInLeft 1s linear;
+		}
 	}
 	article.lastSlide {
 		transform: translateX(-100%);
 	}
 	article.nextSlide {
 		transform: translateX(100%);
+	}
+
+	@keyframes moveInLeft {
+		0% {
+			opacity: 0;
+			transform: translateX(-10rem);
+		}
+		80% {
+			transform: translateX(80rem);
+		}
+		100% {
+			opacity: 1;
+			transform: translateX(0);
+		}
+	}
+
+	@keyframes moveInRight {
+		0% {
+			opacity: 0;
+			transform: translateX(10rem);
+		}
+		80% {
+			transform: translateX(-80rem);
+		}
+		100% {
+			opacity: 1;
+			transform: translateX(0);
+		}
 	}
 `;
 
