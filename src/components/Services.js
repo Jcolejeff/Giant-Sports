@@ -5,20 +5,20 @@ import { Zoom } from "react-awesome-reveal";
 const Services = () => {
 	return (
 		<Wrapper>
+			<article className="header">
+				<h3>
+					Giant Sports
+					<br />
+					let's your build your future
+				</h3>
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto
+					nihil explicabo repellat eos veritatis beatae quae quod. Expedita,
+					autem deleniti.
+				</p>
+			</article>
 			<Zoom>
 				<div className="section-center">
-					<article className="header">
-						<h3>
-							Giant Sports
-							<br />
-							let's your build your future
-						</h3>
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit.
-							Architecto nihil explicabo repellat eos veritatis beatae quae
-							quod. Expedita, autem deleniti.
-						</p>
-					</article>
 					<div className="services-center">
 						{services.map((service) => {
 							const { id, icon, title, text } = service;
@@ -38,6 +38,8 @@ const Services = () => {
 };
 
 const Wrapper = styled.section`
+	background: var(--clr-primary-9);
+
 	.services-center {
 		grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
 	}
@@ -46,8 +48,6 @@ const Wrapper = styled.section`
 		color: var(--clr-primary-1);
 		font-weight: 300;
 	}
-
-	background: var(--clr-primary-9);
 
 	.header h3 {
 		margin-bottom: 2rem;
@@ -59,15 +59,14 @@ const Wrapper = styled.section`
 		color: var(--clr-primary-3);
 	}
 	.services-center {
-		margin-top: 4rem;
 		display: grid;
 		gap: 2.5rem;
 	}
 	.service {
 		background: var(--clr-primary-7);
 		text-align: center;
-		padding: 2.5rem 2rem;
-		border-radius: var(--radius);
+		padding: 4rem 3rem;
+		border-radius: 50%;
 		p {
 			color: var(--clr-primary-2);
 		}
@@ -90,6 +89,10 @@ const Wrapper = styled.section`
 		.header {
 			display: grid;
 			grid-template-columns: 1fr 1fr;
+			position: relative;
+			top: 8rem;
+			text-align: center;
+			padding-inline-end: 4rem;
 		}
 	}
 	@media (min-width: 576px) {
@@ -100,7 +103,7 @@ const Wrapper = styled.section`
 	@media (min-width: 1280px) {
 		padding: 0;
 		.section-center {
-			transform: translateY(10rem);
+			transform: translateY(3rem);
 		}
 	}
 `;

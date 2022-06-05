@@ -1,13 +1,13 @@
 import React from "react";
 import styled from "styled-components";
-import { Zoom } from "react-awesome-reveal";
+import { Zoom, Slide } from "react-awesome-reveal";
 import { Link } from "react-router-dom";
 import { FaTwitter, FaLinkedinIn, FaGithub, FaMailBulk } from "react-icons/fa";
 
 const Footer = () => {
 	return (
-		<Zoom>
-			<Wrapper>
+		<Wrapper>
+			<Slide>
 				<div className="contact">
 					<section>
 						<img src="" alt="" />
@@ -111,8 +111,8 @@ const Footer = () => {
 						</li>
 					</ul>
 				</div>
-			</Wrapper>
-		</Zoom>
+			</Slide>
+		</Wrapper>
 	);
 };
 
