@@ -1,10 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 import { Zoom, Slide } from "react-awesome-reveal";
+import { useGlobalContext } from "../context";
 
 const About = () => {
+	const { closeSubmenu } = useGlobalContext();
+
 	return (
-		<Wrapper>
+		<Wrapper onMouseOver={closeSubmenu}>
 			<Zoom>
 				<section>
 					<h3>ABOUT</h3>

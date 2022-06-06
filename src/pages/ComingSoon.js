@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { useGlobalContext } from "../context";
+
 const ComingSoon = () => {
 	const { closeSubmenu } = useGlobalContext();
 
@@ -23,6 +24,7 @@ const Wrapper = styled.main`
 	align-items: center;
 	text-align: center;
 	flex-direction: column;
+
 	h1 {
 		font-size: 10rem;
 	}

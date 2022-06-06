@@ -81,10 +81,6 @@ function App() {
 const StyledSlider = styled.section`
 	margin-block-end: 5rem;
 
-	.title {
-		text-align: center;
-		margin-bottom: 2rem;
-	}
 	.title h2 {
 		display: flex;
 		align-items: center;
@@ -100,7 +96,7 @@ const StyledSlider = styled.section`
 	.section {
 		margin: 0 auto;
 		margin-top: 4rem;
-		width: 90vw;
+		width: 95vw;
 		height: 600px;
 		text-align: center;
 		position: relative;
@@ -110,7 +106,7 @@ const StyledSlider = styled.section`
 	.person-img {
 		margin-bottom: 1rem;
 		width: 100%;
-
+		height: 100%;
 		object-fit: cover;
 		border: 4px solid var(--clr-grey-8);
 		box-shadow: var(--dark-shadow);
@@ -130,7 +126,7 @@ const StyledSlider = styled.section`
 		color: white;
 		position: absolute;
 		z-index: 60;
-		top: 290px;
+		top: 240px;
 		left: 50%;
 		transform: translateX(-50%);
 	}
@@ -143,7 +139,7 @@ const StyledSlider = styled.section`
 		color: white;
 		position: absolute;
 		z-index: 60;
-		top: 300px;
+		top: 350px;
 		left: 50%;
 		transform: translateX(-50%);
 	}
@@ -159,12 +155,12 @@ const StyledSlider = styled.section`
 		transform: translateY(-50%);
 		background: var(--clr-grey-5);
 		color: var(--clr-white);
-		width: 1.25rem;
-		height: 1.25rem;
+		width: 2.7rem;
+		height: 3rem;
 		display: grid;
 		place-items: center;
 		border-color: transparent;
-		font-size: 1rem;
+		font-size: 1.5rem;
 		border-radius: var(--radius);
 		cursor: pointer;
 		transition: var(--transition);
@@ -260,6 +256,29 @@ const StyledSlider = styled.section`
 	}
 	@media (min-width: 40rem) {
 		margin-block-start: 10rem;
+		.title {
+			text-transform: capitalize;
+			margin-bottom: 0.75rem;
+			color: white;
+			position: absolute;
+			z-index: 60;
+			top: 290px;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+		.text {
+			max-width: 35em;
+			margin: 0 auto;
+			margin-top: 2rem;
+			line-height: 2;
+			color: var(--clr-grey-5);
+			color: white;
+			position: absolute;
+			z-index: 60;
+			top: 300px;
+			left: 50%;
+			transform: translateX(-50%);
+		}
 	}
 `;
 

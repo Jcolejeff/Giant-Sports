@@ -69,13 +69,15 @@ const Wrapper = styled.section`
 	}
 	.services-center {
 		display: grid;
-		gap: 2.5rem;
+		gap: 2rem;
 	}
 	.service {
+		margin: 1rem;
 		background: var(--clr-primary-7);
 		text-align: center;
 		padding: 2.5rem 2rem;
 		border-radius: var(--radius);
+
 		p {
 			color: var(--clr-primary-2);
 		}
@@ -95,6 +97,7 @@ const Wrapper = styled.section`
 		}
 	}
 	@media (min-width: 992px) {
+		margin-block-start: 10rem;
 		.header {
 			display: grid;
 			grid-template-columns: 1fr 1fr;
