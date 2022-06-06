@@ -5,7 +5,7 @@ import { Zoom, Slide } from "react-awesome-reveal";
 const About = () => {
 	return (
 		<Wrapper>
-			<Slide>
+			<Zoom>
 				<section>
 					<h3>ABOUT</h3>
 					<h3>GIANT SPORTS PLUS</h3> With major subsidiary Ghis (Giant Hills
@@ -25,7 +25,7 @@ const About = () => {
 					Giantsportsplus and become a part of our global community for positive
 					outcomes.
 				</section>
-			</Slide>
+			</Zoom>
 		</Wrapper>
 	);
 };
@@ -38,8 +38,8 @@ const Wrapper = styled.div`
 	text-align: center;
 	font-size: 1.3rem;
 	font-family: "Hubballi", cursive;
-	font-weight: 550;
-
+	font-weight: 400;
+	word-spacing: 3px;
 	box-shadow: var(--light-shadow);
 	padding: 3.5rem;
 	border-radius: 10px;

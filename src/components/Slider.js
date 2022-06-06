@@ -107,7 +107,6 @@ const StyledSlider = styled.section`
 		position: relative;
 		display: flex;
 		overflow: hidden;
-		border-radius: 10px;
 	}
 	.person-img {
 		margin-bottom: 1rem;
@@ -192,7 +191,7 @@ const StyledSlider = styled.section`
 			font-size: 1.5rem;
 		}
 		.section {
-			width: 95vw;
+			width: 98vw;
 		}
 	}
 	article {

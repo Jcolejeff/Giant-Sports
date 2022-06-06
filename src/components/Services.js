@@ -65,8 +65,8 @@ const Wrapper = styled.section`
 	.service {
 		background: var(--clr-primary-7);
 		text-align: center;
-		padding: 4rem 3rem;
-		border-radius: 50%;
+		padding: 2.5rem 2rem;
+		border-radius: var(--radius);
 		p {
 			color: var(--clr-primary-2);
 		}
@@ -103,7 +103,7 @@ const Wrapper = styled.section`
 	@media (min-width: 1280px) {
 		padding: 0;
 		.section-center {
-			transform: translateY(3rem);
+			transform: translateY(8rem);
 		}
 	}
 `;
