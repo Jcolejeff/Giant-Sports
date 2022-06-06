@@ -46,7 +46,8 @@ const Wrapper = styled.section`
 	h3,
 	h4 {
 		color: var(--clr-primary-1);
-		font-weight: 300;
+		font-weight: 400;
+		font-size: 1.5rem;
 	}
 
 	.header {
@@ -66,6 +67,7 @@ const Wrapper = styled.section`
 		margin-bottom: 0;
 		line-height: 1.8;
 		color: var(--clr-primary-3);
+		font-size: 1.3rem;
 	}
 	.services-center {
 		display: grid;

@@ -81,10 +81,10 @@ const Nav = styled.nav`
 		background: transparent;
 		position: relative;
 		z-index: 1;
+		padding: 0;
 	}
 	.nav-center {
 		width: 90vw;
-		max-width: var(--max-width);
 	}
 	.nav-header {
 		display: flex;
@@ -115,6 +115,9 @@ const Nav = styled.nav`
 	}
 	/* nav media query */
 	@media screen and (min-width: 800px) {
+		.nav {
+			padding: 0;
+		}
 		.nav-center {
 			display: flex;
 			justify-content: space-between;
@@ -136,6 +139,7 @@ const Nav = styled.nav`
 			display: grid;
 			align-items: center;
 			justify-items: center;
+			margin-inline-start: 5rem;
 		}
 		.nav-links li {
 			height: 100%;
@@ -144,22 +148,23 @@ const Nav = styled.nav`
 			height: 100%;
 			background: transparent;
 			border-color: transparent;
-			font-size: 0.9rem;
+			font-size: 1.3rem;
 			color: white;
 			text-transform: capitalize;
 			letter-spacing: 1px;
-			width: 7rem;
+			width: 8rem;
 			justify-items: center;
+			font-family: inherit;
 		}
 		.link-btn-1 {
 			height: 100%;
 			background: transparent;
 			border-color: transparent;
-			font-size: 0.9rem;
+			font-size: 1.3rem;
 			color: white;
 			text-transform: capitalize;
 			letter-spacing: 1px;
-			width: 6rem;
+			width: 1rem;
 			justify-items: center;
 		}
 	}
