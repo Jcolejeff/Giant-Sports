@@ -72,6 +72,7 @@ export default Navbar;
 
 const Nav = styled.nav`
 	background-color: black;
+
 	.nav {
 		height: 5rem;
 		display: flex;

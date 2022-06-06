@@ -49,10 +49,19 @@ const Wrapper = styled.section`
 		font-weight: 300;
 	}
 
-	.header h3 {
-		margin-bottom: 2rem;
-		line-height: 1.3;
+	.header {
+		display: grid;
+		grid-template-columns: 1fr;
+		position: relative;
+		top: 3rem;
+		text-align: center;
+
+		h3 {
+			margin-bottom: 2rem;
+			line-height: 1.3;
+		}
 	}
+
 	p {
 		margin-bottom: 0;
 		line-height: 1.8;

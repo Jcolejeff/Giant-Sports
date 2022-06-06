@@ -34,15 +34,28 @@ const Wrapper = styled.div`
 	margin-inline: auto;
 	margin-block-end: 3rem;
 	margin-block-start: 2rem;
-	width: 80vw;
+	width: 90vw;
 	text-align: center;
-	font-size: 1.3rem;
-	font-family: "Hubballi", cursive;
+	font-size: 0.97rem;
 	font-weight: 400;
 	word-spacing: 3px;
 	box-shadow: var(--light-shadow);
-	padding: 3.5rem;
+	padding: 1.5rem;
 	border-radius: 10px;
+	@media (min-width: 40rem) {
+		margin-inline: auto;
+		margin-block-end: 3rem;
+		margin-block-start: 2rem;
+		width: 80vw;
+		text-align: center;
+		font-size: 1.3rem;
+		font-family: "Hubballi", cursive;
+		font-weight: 400;
+		word-spacing: 3px;
+		box-shadow: var(--light-shadow);
+		padding: 3.5rem;
+		border-radius: 10px;
+	}
 `;
 
 export default About;

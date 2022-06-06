@@ -79,7 +79,6 @@ function App() {
 	);
 }
 const StyledSlider = styled.section`
-	margin-block-start: 10rem;
 	margin-block-end: 5rem;
 
 	.title {
@@ -258,6 +257,9 @@ const StyledSlider = styled.section`
 			opacity: 1;
 			transform: translateX(0);
 		}
+	}
+	@media (min-width: 40rem) {
+		margin-block-start: 10rem;
 	}
 `;
 
