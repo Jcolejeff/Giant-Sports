@@ -20,7 +20,7 @@ const Hero = () => {
 					doloremque cupiditate eius sunt ut inventore perspiciatis provident
 					reiciendis necessitatibus laudantium totam!
 				</p>
-				<Link to="/form" className="btn hero-btn">
+				<Link to="/comingSoon" className="btn hero-btn">
 					Start now
 				</Link>
 			</article>
