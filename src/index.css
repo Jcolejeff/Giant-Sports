@@ -17,7 +17,7 @@ Variables
 	--clr-primary-6: hsl(205, 89%, 70%);
 	--clr-primary-7: hsl(205, 90%, 76%);
 	--clr-primary-8: hsl(205, 86%, 81%);
-	--clr-primary-9: hsl(205, 90%, 88%);
+	--clr-primary-9: hsl(205, 85%, 87%);
 	--clr-primary-10: hsl(205, 100%, 96%);
 	/* darkest grey - used for headings */
 	--clr-grey-1: hsl(209, 61%, 16%);
@@ -66,6 +66,7 @@ body {
 	color: var(--clr-grey-1);
 	line-height: 1.5;
 	font-size: 1rem;
+	font-weight: 600;
 }
 ul {
 	list-style-type: none;

@@ -6,11 +6,11 @@ const Services = () => {
 	return (
 		<Wrapper>
 			<article className="header">
-				<h3>
+				<h2>
 					Giant Sports
 					<br />
 					let's your build your future
-				</h3>
+				</h2>
 				<p>
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto
 					nihil explicabo repellat eos veritatis beatae quae quod. Expedita,
@@ -47,7 +47,7 @@ const Wrapper = styled.section`
 	h4 {
 		color: var(--clr-primary-1);
 		font-weight: 400;
-		font-size: 1.5rem;
+		font-size: 1.6rem;
 	}
 
 	.header {
@@ -66,8 +66,8 @@ const Wrapper = styled.section`
 	p {
 		margin-bottom: 0;
 		line-height: 1.8;
-		color: var(--clr-primary-3);
-		font-size: 1.3rem;
+		padding-inline: 0.6rem;
+		font-size: 1rem;
 	}
 	.services-center {
 		display: grid;
@@ -79,10 +79,6 @@ const Wrapper = styled.section`
 		text-align: center;
 		padding: 2.5rem 2rem;
 		border-radius: var(--radius);
-
-		p {
-			color: var(--clr-primary-2);
-		}
 	}
 	span {
 		width: 4rem;
@@ -107,6 +103,10 @@ const Wrapper = styled.section`
 			top: 8rem;
 			text-align: center;
 			padding-inline-end: 4rem;
+			h3,
+			p {
+				font-size: 1.3rem;
+			}
 		}
 	}
 	@media (min-width: 576px) {
@@ -117,7 +117,7 @@ const Wrapper = styled.section`
 	@media (min-width: 1280px) {
 		padding: 0;
 		.section-center {
-			transform: translateY(8rem);
+			transform: translateY(10.2rem);
 		}
 	}
 `;

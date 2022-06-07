@@ -140,6 +140,7 @@ const Nav = styled.nav`
 			align-items: center;
 			justify-items: center;
 			margin-inline-start: 5rem;
+			font-weight: 300;
 		}
 		.nav-links li {
 			height: 100%;

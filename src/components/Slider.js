@@ -64,7 +64,7 @@ function App() {
 							<img src={image} alt={name} className="person-img" />
 
 							<h2 className="title">{title}</h2>
-							<p className="text">{quote}</p>
+							<h4 className="text">{quote}</h4>
 						</article>
 					);
 				})}
@@ -79,7 +79,7 @@ function App() {
 	);
 }
 const StyledSlider = styled.section`
-	margin-block-end: 5rem;
+	margin-block-end: 2rem;
 
 	.title h2 {
 		display: flex;
@@ -255,7 +255,7 @@ const StyledSlider = styled.section`
 		}
 	}
 	@media (min-width: 40rem) {
-		margin-block-start: 10rem;
+		margin-block-start: 5rem;
 		.title {
 			text-transform: capitalize;
 			margin-bottom: 0.75rem;

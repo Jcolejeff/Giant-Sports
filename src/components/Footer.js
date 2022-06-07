@@ -109,9 +109,9 @@ const Wrapper = styled.footer`
 	margin-block-start: 2rem;
 	width: 95vw;
 	text-align: center;
-	font-size: 0.65rem;
+	font-size: 0.8rem;
 
-	font-weight: 400;
+	font-weight: 600;
 
 	box-shadow: var(--light-shadow);
 	padding: 3.5rem;
@@ -154,8 +154,8 @@ const Wrapper = styled.footer`
 		text-align: center;
 		font-size: 0.9rem;
 		gap: 3rem;
-		font-weight: 400;
-
+		font-weight: 600;
+		font-size: 1rem;
 		box-shadow: var(--light-shadow);
 
 		border-radius: 10px;
