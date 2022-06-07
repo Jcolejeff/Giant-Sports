@@ -18,7 +18,7 @@ const sublinks = [
 	{
 		page: "Membership",
 		links: [
-			{ label: "Participant", icon: <FaBook />, url: "/form" },
+			{ label: "Participant", icon: <FaBook />, url: "/comingSoon" },
 			{ label: "Mentorship", icon: <FaBook />, url: "/comingSoon" },
 			{ label: "Partnership", icon: <FaBook />, url: "/comingSoon" },
 			{ label: "Endorsement", icon: <FaBook />, url: "/comingSoon" },

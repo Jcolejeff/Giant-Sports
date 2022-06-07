@@ -39,6 +39,7 @@ const About = () => {
 const Wrapper = styled.div`
 	margin-inline: auto;
 	margin-block-end: 3rem;
+	margin-block-start: 3rem;
 	background-color: hsl(205, 54%, 87%);
 	width: 90vw;
 	text-align: center;
@@ -54,7 +55,7 @@ const Wrapper = styled.div`
 		font-weight: 400;
 		font-size: 1.5rem;
 		padding: 3.5rem;
-		margin-block-start: 3rem;
+
 		h3 {
 			font-size: 1.3rem;
 		}

@@ -53,7 +53,7 @@ const Footer = () => {
 						<Link to="/comingSoon">Trainee</Link>
 						<Link to="/comingSoon">Mentorship</Link>
 						<Link to="/comingSoon">Endorsement</Link>
-						<Link to="/form">Partnership</Link>
+						<Link to="/comingSoon">Partnership</Link>
 						<Link to="/comingSoon">Sports</Link>
 						<Link to="/comingSoon">Agriculture</Link>
 						<Link to="/comingSoon">Education</Link>
